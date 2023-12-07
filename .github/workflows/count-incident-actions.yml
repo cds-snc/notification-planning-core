@@ -1,0 +1,20 @@
+name: Count Issues
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  count_issues:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Count Incident Action issues
+      uses: kazupon/issue-count-action
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        labels: 'Incident Action'
+        state: open
