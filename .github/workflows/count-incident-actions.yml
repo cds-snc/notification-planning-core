@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Count Incident Action issues
-      uses: kazupon/issue-count-action
+      uses: kazupon/issue-count-action@284ff91974f64c6ac7192a394d895434eabee85f
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         labels: 'Incident Action'
