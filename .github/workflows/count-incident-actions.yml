@@ -56,5 +56,5 @@ jobs:
     steps:
     - name: Notify Slack channel if this job failed
       run: |
-        json="{'text':'Core team tech debt show-off :melting_face: :muscle:\nBug: ${{ needs.count_bug_issues.outputs.count }}, Incident Actions: ${{ needs.count_incident_action_issues.outputs.count }}, Tech Debt issues: ${{ needs.count_tech_debt_issues.outputs.count }}'}"
+        json="{'text':'Core team tech debt show-off :muscle: :melting_face:\nBug: ${{ needs.count_bug_issues.outputs.count }}, Incident Actions: ${{ needs.count_incident_action_issues.outputs.count }}, Tech Debt issues: ${{ needs.count_tech_debt_issues.outputs.count }}'}"
         curl -X POST -H 'Content-type: application/json' --data "$json"  ${{ secrets.SLACK_WEBHOOK_URL }}
