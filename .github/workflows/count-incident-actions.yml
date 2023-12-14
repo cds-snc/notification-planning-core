@@ -4,6 +4,7 @@ on:
   schedule:
     # At 13:00 (1 pm) UTC / 8:00 EST on Monday
     - cron: '0 13 * * 1'
+  workflow_dispatch:
 
 jobs:
   count_issues:
