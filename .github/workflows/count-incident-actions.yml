@@ -7,16 +7,57 @@ on:
   workflow_dispatch:
 
 jobs:
-  count_issues:
+  count_bug_issues:
     runs-on: ubuntu-latest
+    outputs:
+      count: ${{ steps.count.outputs.count }}
 
     steps:
-    - name: Count Incident Action issues
+    - name: Count Bug | Bogue issues
+      id: count
       uses: kazupon/issue-count-action@284ff91974f64c6ac7192a394d895434eabee85f
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        labels: 
-          -'Bug | Bogue'
-          -'Incident Action'
-          -'Tech Debt'
+        labels: 'Bug | Bogue'
         state: open
+
+  count_incident_action_issues:
+    runs-on: ubuntu-latest
+    outputs:
+      count: ${{ steps.count.outputs.count }}
+
+    steps:
+    - name: Count Incident Action issues
+      id: count
+      uses: kazupon/issue-count-action@284ff91974f64c6ac7192a394d895434eabee85f
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        labels: 'Incident Action'
+        state: open
+
+  count_tech_debt_issues:
+    runs-on: ubuntu-latest
+    outputs:
+      count: ${{ steps.count.outputs.count }}
+
+    steps:
+    - name: Count Tech Debt issues
+      id: count
+      uses: kazupon/issue-count-action@284ff91974f64c6ac7192a394d895434eabee85f
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        labels: 'Tech Debt'
+        state: open
+
+  report_to_slack:
+    needs: [count_bug_issues, count_incident_action_issues, count_tech_debt_issues]
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Report to Slack
+      uses: slackapi/slack-github-action@v1.14.0
+      with:
+        slack-message: 'Core team tech debt show-off :melting_face: :muscle:\nBug: ${{ needs.count_bug_issues.outputs.count }}, Incident Actions: ${{ needs.count_incident_action_issues.outputs.count }}, Tech Debt issues: ${{ needs.count_tech_debt_issues.outputs.count }}'
+        slack-channel: #notify-dev
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
