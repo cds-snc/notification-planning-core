@@ -58,6 +58,6 @@ jobs:
       uses: slackapi/slack-github-action@v1.14.0
       with:
         slack-message: 'Core team tech debt show-off :melting_face: :muscle:\nBug: ${{ needs.count_bug_issues.outputs.count }}, Incident Actions: ${{ needs.count_incident_action_issues.outputs.count }}, Tech Debt issues: ${{ needs.count_tech_debt_issues.outputs.count }}'
-        slack-channel: #notify-dev
+        channel-id: 'CV38DBNVA'
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
