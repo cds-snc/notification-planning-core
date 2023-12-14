@@ -1,11 +1,10 @@
 name: Count Issues
 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  schedule:
+    # At 13:00 (1 pm) UTC / 8:00 EST on Monday
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
 
 jobs:
   count_issues:
@@ -16,5 +15,5 @@ jobs:
       uses: kazupon/issue-count-action@284ff91974f64c6ac7192a394d895434eabee85f
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        labels: 'Incident Action'
+        labels: 'Bug | Bogue','Incident Action','Tech Debt'
         state: open
