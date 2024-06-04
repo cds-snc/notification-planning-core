@@ -19,6 +19,6 @@ Describe why we are doing this chore.
 
 -[ ] Provide a list of things that should be required in order to consider this complete
 
-## Resources
+# Resources
 
 - [ ]List any resources associated with this chore (ex. K8s release notes, AWS AMI changes)
