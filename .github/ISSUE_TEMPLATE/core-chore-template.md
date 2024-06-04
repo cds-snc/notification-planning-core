@@ -21,4 +21,8 @@ Describe why we are doing this chore.
 
 # Resources
 
+# Triggers / Schedule
+
+Describe the schedule or trigger for this chore. When should it be done?
+
 - [ ]List any resources associated with this chore (ex. K8s release notes, AWS AMI changes)
