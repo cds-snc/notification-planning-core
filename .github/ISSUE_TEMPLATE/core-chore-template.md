@@ -15,7 +15,7 @@ Provide one or two sentences of what the chore is.
 
 Describe why we are doing this chore.
 
-## Acceptance Criteria
+# Acceptance Criteria
 
 -[ ] Provide a list of things that should be required in order to consider this complete
 
