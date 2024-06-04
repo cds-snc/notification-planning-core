@@ -2,7 +2,7 @@
 name: Core Chore Template
 about: Use this template for Notify Core chores
 title: "[CHORE] TASK NAME"
-labels: Chore, Routine, Tech Debt
+labels: Routine, Tech Debt
 assignees: ''
 
 ---
