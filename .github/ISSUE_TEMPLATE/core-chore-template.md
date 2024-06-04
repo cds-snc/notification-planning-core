@@ -11,7 +11,7 @@ assignees: ''
 
 Provide one or two sentences of what the chore is.
 
-## Why
+# Why
 
 Describe why we are doing this chore.
 
