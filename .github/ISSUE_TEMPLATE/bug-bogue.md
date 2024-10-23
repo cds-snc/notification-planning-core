@@ -45,6 +45,12 @@ Impact on Notify team:
 
 If applicable, add screenshots to help explain your problem.
 
+## QA
+
+QA items to verify the bug is resolved:
+
+- [ ] _Item 1..._
+
 ## Additional context
 
 Add any other context about the problem here.
