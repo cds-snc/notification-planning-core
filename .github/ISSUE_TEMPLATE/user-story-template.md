@@ -6,7 +6,7 @@ labels: ''
 assignees: ''
 
 ---
-
+### :star: REMEMBER!  Before closing a story, keep in mind our [Definition of Done](https://docs.google.com/document/d/19BUtceh-EYtRVLbp-EsDLXRst_2QTCEDDITOEiKRHPM/edit?tab=t.0#heading=h.wzpz2jcviuei) :star:
 # Description
 
 As a (user), I need to be able to do (X) so that I can achieve (Y) outcome. 
@@ -40,3 +40,4 @@ Given some context, when (X) action occurs, then (Y) outcome is achieved.
 # QA Steps
 
 - [ ] Tested in a realistic production scenario
+
