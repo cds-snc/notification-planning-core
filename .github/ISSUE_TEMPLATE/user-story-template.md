@@ -23,19 +23,16 @@ _What does that entail?_
 
 _Close to the business, what's the value?_
 
-
 # Acceptance Criteria
 
 Given some context, when (X) action occurs, then (Y) outcome is achieved.
 
-- [ ] Generate appropriate log messages so that executions of this feature can be tracked
-- [ ] Can misuse of this feature cause harm? If yes, create an alert
-- [ ] Update the status of related findings, insights, and hypotheses on the Research Airtable
-- [ ] Once change/fix/feature is implemented, link relevant Airtable records to design artifacts (Figma)
+- [ ] Acceptance criteria 1
+- [ ] Acceptance criteria 2
 
-* Privacy considerations
-* Security controls in place
-* Measuring success and metrics
+- Privacy considerations
+- Security controls in place
+- Measuring success and metrics
 
 # QA Steps
 
